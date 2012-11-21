@@ -13,7 +13,7 @@ class Domain_Repository_EventIndexTest extends tx_phpunit_testcase {
 	protected $repository;
 	
 	public function setUp() {
-		t3lib_div::makeInstance('Tx_Extbase_Dispatcher');
+		t3lib_div::makeInstance('Tx_Extbase_Core_Bootstrap');
 		$this->repository = new Tx_CzSimpleCal_Domain_Repository_EventIndexRepositoryMock();
 	}
 	

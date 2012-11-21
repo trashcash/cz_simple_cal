@@ -22,7 +22,7 @@ abstract class Tx_CzSimpleCal_Controller_BaseExtendableController extends Tx_Ext
 		 * discarded Template view had it). So we do it here.
 		 */
 		if($view instanceof Tx_Fluid_View_TemplateViewInterface) {
-			$extbaseFrameworkConfiguration = Tx_Extbase_Dispatcher::getExtbaseFrameworkConfiguration();
+			$extbaseFrameworkConfiguration = $this->configurationManager->getConfiguration('Framework');
 			if (isset($extbaseFrameworkConfiguration['view']['templateRootPath']) && strlen($extbaseFrameworkConfiguration['view']['templateRootPath']) > 0) {
 				$view->setTemplateRootPath(t3lib_div::getFileAbsFileName($extbaseFrameworkConfiguration['view']['templateRootPath']));
 			}

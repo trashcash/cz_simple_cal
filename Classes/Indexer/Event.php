@@ -39,7 +39,7 @@ class Tx_CzSimpleCal_Indexer_Event {
 		Tx_CzSimpleCal_Domain_Repository_EventIndexRepository $eventIndexRepository,
 		Tx_Extbase_Persistence_ManagerInterface $persistenceManager
 	) {
-		t3lib_div::makeInstance('Tx_Extbase_Dispatcher');
+		t3lib_div::makeInstance('Tx_Extbase_Core_Bootstrap');
 		
 		$this->eventRepository = $eventRepository;
 		$this->eventIndexRepository = $eventIndexRepository;
